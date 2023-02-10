@@ -1,19 +1,22 @@
 import React from "react";
 import houseImg from "../../assets/annotatedHouse.png";
+
 function Home() {
   return (
-    <div>
-      <h1>Get Property Condition Data Automatically</h1>
-      <img src={houseImg} alt="Distressed House" />
-      <p>
-        We collect imagery of neighborhoods and use computer vision models to
-        evaluate the distress of the properties within them. We generate
-        distress scores taking into account roof/siding condition, vegetation
-        overgrowth, dented gutters/garage doors, industrial dumpsters, boarded
-        windows and tarps.
-      </p>
-      <button>Contact Us</button>
-    </div>
+    <section className="homeSection1">
+      <div className="textSection1">
+        <h1>Get Property Condition Data Automatically with AI</h1>
+        <p>
+          We collect imagery of residential properties and use AI models to
+          evaluate their distress. We generate distress scores taking into
+          account roof/siding condition, vegetation overgrowth, dented
+          gutters/garage doors, industrial dumpsters, boarded windows and tarps.
+        </p>
+      </div>
+      <div className="imgDiv">
+        <img src={houseImg} alt="Distressed House" className="houseAnimated" />
+      </div>
+    </section>
   );
 }
 

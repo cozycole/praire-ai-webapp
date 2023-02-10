@@ -6,16 +6,20 @@ import Home from "./components/Home/Home";
 import Demo from "./components/Demo/Demo";
 import Contact from "./components/Contact/Contact";
 
+// wrapper div used to give a margin for all content
+// within body since body will have auto side margins
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/demo" element={<Demo />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div id="wrapper">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/demo" element={<Demo />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
