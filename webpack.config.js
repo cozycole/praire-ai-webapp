@@ -24,11 +24,15 @@ module.exports = {
         use: "html-loader",
       },
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
+      // {
+      //   test: /\.scss$/,
+      //   use: ["style-loader", "css-loader", "sass-loader"],
+      // },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|ttf)$/i,
         type: "asset/resource",
       },
     ],
@@ -36,6 +40,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: "public/index.html",
+      favicon: "./public/favicon.ico",
     }),
   ],
   devServer: {
