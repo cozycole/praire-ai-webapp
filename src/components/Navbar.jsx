@@ -1,24 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
+  const [dropDown, setDrop] = useState(false);
+
   return (
     <nav className="navBar">
-      <img src={logo} alt="Logo" className="navLogo" />
-      <div className="navLinks">
+      <div className="navLogo">
+        <img src={logo} alt="Logo" />
+      </div>
+      <a href="#" className="toggleButton" onClick={() => setDrop(!dropDown)}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </a>
+      <div className={dropDown ? "navLinks" : "navLinksDropDown"}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => setDrop(!dropDown)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/demo">API</Link>
+            <Link to="/demo" onClick={() => setDrop(!dropDown)}>
+              API
+            </Link>
           </li>
           <li>
-            <Link to="/demo">Sample</Link>
+            <Link to="/demo" onClick={() => setDrop(!dropDown)}>
+              Sample
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={() => setDrop(!dropDown)}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

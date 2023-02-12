@@ -5,12 +5,12 @@ function Home() {
   return (
     <section className="homeSection1">
       <div className="textSection1">
-        <h1>Get Property Condition Data Automatically with AI</h1>
+        <h1>Automatic Property Condition Data with AI</h1>
         <p>
-          We collect imagery of residential properties and use AI models to
-          evaluate their distress. We generate distress scores taking into
-          account roof/siding condition, vegetation overgrowth, dented
-          gutters/garage doors, industrial dumpsters, boarded windows and tarps.
+          We collect streetview imagery of residential properties and use AI
+          models to evaluate their distress. This service is made for{" "}
+          <strong>real estate wholesalers and investors</strong> for automating
+          list creation of potential off-market opportunites.
         </p>
       </div>
       <div className="imgDiv">
