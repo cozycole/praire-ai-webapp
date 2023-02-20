@@ -1,7 +1,7 @@
 {
   "name": "praire-ai-webapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Site landing page and demonstrating the computer vision apraisal API. It will use a Django backend to leverage PyTorch model inference. Check 3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

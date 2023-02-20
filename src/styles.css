@@ -1,8 +1,9 @@
 :root {
   --main-color: #2fc1ff;
   --sec-color: white;
-  --content-max-width: 1200px;
+  --content-max-width: 1100px;
   --navlinks-collapse-width: 600px;
+  --page-margin: 4vw;
 }
 
 @font-face {
@@ -20,9 +21,8 @@
 /* Global */
 
 body {
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
+  margin: 0;
   max-width: var(--content-max-width);
   font-family: "Karla";
   background-color: var(--main-color);
@@ -41,9 +41,9 @@ button {
   background-color: white;
 }
 
-#wrapper {
-  margin-left: 5vw;
-  margin-right: 5vw;
+.wrapper {
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
 }
 
 /* Nav Bar */
@@ -84,16 +84,24 @@ button {
   color: rgb(202, 214, 224);
 }
 
+.navLinksHidden {
+  display: none;
+}
+
+.navLinksDropDown {
+  display: none;
+}
+
 .toggleButton {
   position: absolute;
-  top: 6vw;
-  right: 3vw;
+  top: 4.5vw;
+  right: 3.75vw;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 4vw;
   height: 4vw;
-  padding: 4vw;
+  padding: 3.5vw;
   background-color: var(--sec-color);
   border-radius: 10px;
 }
@@ -105,12 +113,14 @@ button {
   background-color: var(--main-color);
   border-radius: 10px;
 }
+
 /* NOTE: this dropdown menu has some redundant 
   styling for .navLinksDropDown */
 @media (max-width: 600px) {
   .toggleButton {
     display: flex;
   }
+
   .navBar {
     flex-direction: column;
     align-items: flex-start;
@@ -119,34 +129,40 @@ button {
   .navLinks {
     display: none;
   }
+
   .navLogo {
     margin-right: 5vw;
   }
+
   .navLinksDropDown {
-    margin: 0;
+    display: block;
+    margin-left:0;
     width: 100vw;
-    /* Needed for overiding 
-    parents width constraint */
     margin-left: calc(50% - 50vw);
   }
+  
   .navLinksDropDown ul {
     flex-direction: column;
-    border-radius: 0;
     list-style: none;
+    border-radius: 0;
     background: white;
+    padding: 0;
+    /* Needed for overiding 
+    parents width constraint */
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
+
   .navLinksDropDown li {
     text-align: center;
-    margin-right: 1em;
-    margin: 0.25em;
+    margin: 0.3em;
     font-size: 1.35em;
   }
 
   .navLinksDropDown li a {
     text-decoration: none;
     color: var(--main-color);
+    padding: 0.3em;
   }
 }
 

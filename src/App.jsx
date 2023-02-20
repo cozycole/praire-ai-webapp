@@ -10,7 +10,7 @@ import Contact from "./components/Contact/Contact";
 // within body since body will have auto side margins
 const App = () => {
   return (
-    <div id="wrapper">
+    <div className="wrapper">
       <Router>
         <Navbar />
         <Routes>
