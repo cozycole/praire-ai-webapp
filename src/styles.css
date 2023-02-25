@@ -21,37 +21,36 @@
 /* Global */
 
 body {
-  padding: 0;
   margin: 0;
-  max-width: var(--content-max-width);
+  padding: 0;
   font-family: "Karla";
   background-color: var(--main-color);
+}
+
+.centerContents {
+  margin: auto;
+  max-width: var(--content-max-width);
+}
+
+.wrapperMargin {
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
 }
 
 strong {
   font-family: "Karla-Bold";
 }
 
-button {
-  padding: 1rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.25rem;
-  color: var(--main-color);
-  background-color: white;
+h1 {
+  margin: 0;
 }
-
-.wrapper {
-  margin-left: var(--page-margin);
-  margin-right: var(--page-margin);
-}
-
 /* Nav Bar */
 
 .navBar {
   display: flex;
   align-items: center;
   margin-top: min(4vw, 1.75em);
+  width: 100%;
 }
 
 .navLogo img {
@@ -197,4 +196,64 @@ p {
 
 .houseAnimated {
   width: 100%;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #1982af;
+  width: 100%;
+}
+
+.footerCenter {
+  margin: auto;
+  max-width: var(--content-max-width);
+}
+
+.footer p{
+  font-size: min(1em, 2vw);
+}
+
+.footerContainer {
+  display: flex;
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
+}
+
+.footerIcon {
+  width: min(2em, 3vw);
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.footerLeft p {
+  margin-left: 0.5em;
+}
+
+.footerLocation {
+  display: flex;
+  margin-left: 1.5em;
+}
+
+.footerSocial {
+  display: flex;
+}
+
+.social1 {
+  margin-left: 1.5em;
+}
+
+.social2 {
+  margin-left: 0.75em;
+}
+
+.footerEmail {
+  display: flex;
+}
+
+.footerRight {
+  margin-left: auto;
 }
