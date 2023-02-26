@@ -27,8 +27,15 @@ body {
   background-color: var(--main-color);
 }
 
+.fullView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 .centerContents {
-  margin: auto;
+  margin: 0 auto auto auto;
   max-width: var(--content-max-width);
 }
 
@@ -135,11 +142,11 @@ h1 {
 
   .navLinksDropDown {
     display: block;
-    margin-left:0;
+    margin-left: 0;
     width: 100vw;
     margin-left: calc(50% - 50vw);
   }
-  
+
   .navLinksDropDown ul {
     flex-direction: column;
     list-style: none;
@@ -203,6 +210,7 @@ p {
 .footer {
   background-color: #1982af;
   width: 100%;
+  justify-content: space-between;
 }
 
 .footerCenter {
@@ -210,7 +218,7 @@ p {
   max-width: var(--content-max-width);
 }
 
-.footer p{
+.footer p {
   font-size: min(1em, 2vw);
 }
 

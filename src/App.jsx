@@ -12,7 +12,7 @@ import Contact from "./components/Contact/Contact";
 // within body since body will have auto side margins
 const App = () => {
   return (
-    <div>
+    <div className="fullView">
       <div className="centerContents">
         <div className="wrapperMargin">
           <Router>
@@ -23,8 +23,8 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Router>
-          </div>
         </div>
+      </div>
       <Footer />
     </div>
   );
