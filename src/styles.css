@@ -27,10 +27,14 @@ body {
   background-color: var(--main-color);
 }
 
+p {
+  font-size: min(2em, 2.75vw);
+  color: white;
+}
+
 .fullView {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
 }
 
@@ -51,6 +55,7 @@ strong {
 h1 {
   margin: 0;
 }
+
 /* Nav Bar */
 
 .navBar {
@@ -176,14 +181,9 @@ h1 {
 Home Page 
 */
 
-h1 {
+.homeSection1 h1 {
   font-family: "Karla-Bold";
   font-size: min(4em, 5.5vw);
-  color: white;
-}
-
-p {
-  font-size: min(2em, 2.75vw);
   color: white;
 }
 
@@ -196,13 +196,89 @@ p {
   width: 40%;
 }
 
-.imgDiv {
+.houseSection1 .imgDiv {
   width: 60%;
   margin: auto;
 }
 
 .houseAnimated {
   width: 100%;
+}
+
+/* Demo Page */
+
+.demoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.demoSection h1 {
+  color: white;
+  margin: 0.5em 0 1em 0;
+}
+
+.demo {
+  display: flex;
+}
+
+.demo .imgDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1em;
+  padding: 1em;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.scoreDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.scoreDiv h2 {
+  color: #2fc1ff;
+}
+
+.distressScore {
+  width: 60%;
+  margin: auto;
+  font-size: 3.5em;
+}
+
+.scoreDiv span {
+  margin: 0 auto 0 auto;
+}
+
+.scoreDiv p {
+  color: #2fc1ff;
+}
+
+.demoSection .imgBorder {
+  display: inline-block;
+  background-color: black;
+  padding: 0.4em;
+  border-radius: 5px;
+}
+
+.demoSection button {
+  margin: 1em auto 0 auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: min(1.25rem, 2vw);
+  color: white;
+  background-color: #2fc1ff;
+}
+
+.demoSection img {
+  width: 100%;
+  vertical-align: middle;
 }
 
 /* Footer */
