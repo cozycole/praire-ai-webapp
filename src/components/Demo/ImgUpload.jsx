@@ -1,19 +1,28 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import houseImg from "../../assets/distressedHouse.png";
 
-export const ImgUpload = () => {
-  const [selectedFile, setSelectedFile] = useState();
-  const [preview, setPreview] = useState();
-
+export default function ImgUpload() {
+  const [selectedFile, setSelectedFile] = useState(true);
+  const [preview, setPreview] = useState(houseImg);
+  
   useEffect(() => {
     if (!selectedFile) {
       setPreview(undefined);
       return;
     }
 
-    const objectUrl = URL.createObjectURL(selectedFile);
-    setPreview(objectUrl);
+    if (selectedFile instanceof String) {
+      setPreview(selectedFile);
+      return;
+    }
 
-    return () => URL.revokeObjectURL(objectUrl);
+    if (selectedFile instanceof File) {
+      const objectUrl = URL.createObjectURL(selectedFile);
+      console.log(objectUrl)
+      setPreview(objectUrl);
+      return () => URL.revokeObjectURL(objectUrl);
+    } 
+
   }, [selectedFile]);
 
   const onSelectFile = (e) => {
@@ -27,8 +36,8 @@ export const ImgUpload = () => {
 
   return (
     <div>
-      <input type="file" onchange={onSelectFile} />
       {selectedFile && <img src={preview} />}
+      <input type="file" onChange={onSelectFile} />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import houseImg from "../../assets/distressedHouse.png";
+import ImgUpload from "./ImgUpload"
 
 function Demo() {
   return (
@@ -7,10 +7,7 @@ function Demo() {
       <h1>PraiRE AI Condition Score Demo</h1>
       <div className="demo">
         <div className="imgDiv">
-          <span className="imgBorder">
-            <img src={houseImg} alt="House" />
-          </span>
-          <button>Upload Image</button>
+          <ImgUpload/>
         </div>
         <div className="scoreDiv">
           <span>
