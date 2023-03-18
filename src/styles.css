@@ -211,6 +211,7 @@ Home Page
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5em;
 }
 
 .demoSection h1 {
@@ -266,7 +267,8 @@ Home Page
   border-radius: 5px;
 }
 
-.demoSection button {
+.fileUploadLabel {
+  cursor: pointer;
   margin: 1em auto 0 auto;
   padding: 1rem;
   border: none;
@@ -274,6 +276,10 @@ Home Page
   font-size: min(1.25rem, 2vw);
   color: white;
   background-color: #2fc1ff;
+}
+
+input[type="file"] {
+  display: none;
 }
 
 .demoSection img {

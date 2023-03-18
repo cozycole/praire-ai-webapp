@@ -35,9 +35,10 @@ export default function ImgUpload() {
   };
 
   return (
-    <div>
+    <div className="imgDiv">
       {selectedFile && <img src={preview} />}
-      <input type="file" onChange={onSelectFile} />
+      <label htmlFor="fileInput" className="fileUploadLabel">Upload Image</label>
+      <input id="fileInput" type="file" accept="image/*" onChange={onSelectFile} />
     </div>
   );
 };

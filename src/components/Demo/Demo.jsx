@@ -6,9 +6,7 @@ function Demo() {
     <div className="demoSection">
       <h1>PraiRE AI Condition Score Demo</h1>
       <div className="demo">
-        <div className="imgDiv">
-          <ImgUpload/>
-        </div>
+        <ImgUpload/>
         <div className="scoreDiv">
           <span>
             <h2>Distress Score</h2>
