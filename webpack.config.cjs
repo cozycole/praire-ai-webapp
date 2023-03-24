@@ -50,5 +50,18 @@ module.exports = {
     compress: true,
     port: 9000,
     historyApiFallback: true,
+    proxy: {
+      // when a requst to /api is done, we want to apply a proxy
+      '/api': {
+        changeOrigin: true,
+        cookieDomainRewrite: 'localhost',
+        target: 'http://localhost:3001',
+        onProxyReq: (proxyReq) => {
+          if (proxyReq.getHeader('origin')) {
+            proxyReq.setHeader('origin', 'http://localhost:3001')
+          }
+        }
+      }
+  }
   },
 };

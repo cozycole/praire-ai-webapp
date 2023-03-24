@@ -1,24 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import ImgUpload from "./ImgUpload"
+import EvalDisplay from "./EvalDisplay"
+import houseImg from "../../assets/distressedHouse.png";
 
 function Demo() {
+  const [score, setScore] = useState(100);
+  const onEvalResponse = (res) => {
+    setScore(res.distressScore * 100);
+  }
   return (
     <div className="demoSection">
       <h1>PraiRE AI Condition Score Demo</h1>
       <div className="demo">
-        <ImgUpload/>
-        <div className="scoreDiv">
-          <span>
-            <h2>Distress Score</h2>
-            <p className="distressScore">
-              <strong>100</strong>
-            </p>
-          </span>
-          <span className="featureDiv">
-            <p>Boarded Windows Detected</p>
-            <p>Tarp Not Detected</p>
-          </span>
-        </div>
+        <ImgUpload onEval={onEvalResponse} />
+        <EvalDisplay score={score}/>
       </div>
     </div>
   );
